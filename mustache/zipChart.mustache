@@ -1,0 +1,16 @@
+<h4>{{title}}</h4>
+<div class="row-fluid {{#more}}more{{/more}}" style="margin-bottom:3px;">
+    <div class="span8">
+      <a class="btn btn-inverse" style="box-sizing:border-box; margin:0; width: 50%;">&nbsp;</a><a class="btn" style="box-sizing:border-box; margin:0; width:50%;">&nbsp;</a>
+    </div>
+</div>
+{{#rows}}
+  <div class="row-fluid {{#more}}more{{/more}}" style="margin-bottom:3px;">
+    <div class="span8">
+      <a class="btn btn-primary" style="box-sizing:border-box; margin:0; width: {{width_a}}%;">{{count_a}}</a><a class="btn btn-success" style="box-sizing:border-box; margin:0; width: {{width_b}}%;">{{count_b}}</a>
+    </div>
+    <div class="span4">{{label}}</div>
+  </div>
+{{/rows}}
+<a href="#" class="show_more">Show More</a>
+<a href="#" class="show_less">Show Less</a>
