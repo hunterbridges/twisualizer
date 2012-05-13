@@ -39,7 +39,13 @@ var Templates = {};
     });
   });
 
-  $.get('dump.json', function(data) {
+  var dumpFile = 'dump.json';
+  if (window.location.hash !== '') {
+    dumpFile = window.location.hash;
+    if (dumpFile.substr(0, 1) === '#') dumpFile = dumpFile.substr(1);
+  }
+
+  $.get(dumpFile, function(data) {
     baseData = data;
     startAppWhenReady();
   });
